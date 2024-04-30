@@ -6,10 +6,10 @@
 
 body{
   font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   /* overflow: hidden; */
 
 }
-*{
-  /* border: 1px solid red; */
+.container{
+  max-height: max-content;
 }

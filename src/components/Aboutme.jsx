@@ -1,9 +1,10 @@
 import React from "react";
 import face from "../assets/me.png";
+
 export default function Aboutme() {
   return (
-    <div className="max-w-[1200px] p-5 m-auto relative">
-      <div className="flex flex-col md:flex-row items-center">
+    <div className="max-w-[1200px]  mb-32 md:mb-0   p-5 h-screen m-aut mt-32 m-auto relative overflow-clip">
+      <div className="flex flex-col md:flex-row items-center  gap-10">
         <img
           className="w-[500px] h-[300px] object-cover"
           src={face}
@@ -13,7 +14,7 @@ export default function Aboutme() {
           <h1 className="text-2xl md:text-4xl lg:text-5xl text-[#0DB760] font-bold py-2">
             About Me
           </h1>
-          <p className="text-slate-600 p-2 text-left">
+          <p className="dark:text-gray-300 text-slate-600 p-2 text-left">
             A dynamic self-taught <strong>software developer</strong> with a
             passion for crafting elegant and functional{" "}
             <strong>web applications </strong> , proficient in utilizing the
@@ -42,12 +43,7 @@ export default function Aboutme() {
           </p>
         </div>
       </div>
-      <div className="absolute z-[-1] top-[-50px] right-[50px] w-[200px] h-[200px] bg-red-200 rounded-full mix-blend-multiply opacity-40"></div>
-
-      <div className="absolute z-[-1] bottom-[100px] right-[00px] w-[180px] h-[180px] bg-yellow-200 rounded-full mix-blend-multiply opacity-25"></div>
-      <div className="absolute z-[-1] top-[250px] left-[250px] w-[190px] h-[190px] bg-purple-200 rounded-full mix-blend-multiply opacity-35"></div>
-
-      <div className="absolute z-[-1] bottom-[200px] right-[50px] w-[160px] h-[160px] bg-pink-200 rounded-full mix-blend-multiply opacity-25"></div>
+      
     </div>
   );
 }

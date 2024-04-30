@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Experience() {
   return (
-    <div className="max-w-[1200px] mt-10 m-auto p-5 relative">
+    <div className="max-w-[1200px] w-full  mt-10 m-auto p-5 relative overflow-clip">
       <h1 className="text-2xl md:text-4xl lg:text-5xl text-[#0DB760] font-bold py-2">
         Work Experience
       </h1>
@@ -54,15 +54,15 @@ export default function Experience() {
           </ul>
         </div>
       </div>
-      {/* <div className="absolute z-[-1] top-[-50px] right-0 w-[200px] h-[200px] bg-red-200 rounded-full mix-blend-multiply opacity-40"></div> */}
-      {/* <div className="absolute z-[-1] bottom-[-50px] left-[-50px] w-[250px] h-[250px] bg-yellow-200 rounded-full mix-blend-multiply opacity-30"></div> */}
-      {/* <div className="absolute z-[-1] top-[150px] left-[150px] w-[220px] h-[220px] bg-green-200 rounded-full mix-blend-multiply opacity-20"></div> */}
-      {/* <div className="absolute z-[-1] bottom-[100px] right-[100px] w-[180px] h-[180px] bg-yellow-200 rounded-full mix-blend-multiply opacity-25"></div>  */}
-      {/* <div className="absolute z-[-1] top-[250px] left-[250px] w-[190px] h-[190px] bg-purple-200 rounded-full mix-blend-multiply opacity-35"></div>  */}
+      <div className="absolute z-[-1] top-[-50px] right-0 w-[200px] h-[200px] bg-red-200 rounded-full mix-blend-multiply opacity-40"></div>
+      <div className="absolute z-[-1] bottom-[-50px] left-[-50px] w-[250px] h-[250px] bg-yellow-200 rounded-full mix-blend-multiply opacity-30"></div>
+      <div className="absolute z-[-1] top-[150px] left-[150px] w-[220px] h-[220px] bg-green-200 rounded-full mix-blend-multiply opacity-20"></div>
+      <div className="absolute z-[-1] bottom-[100px] right-[100px] w-[180px] h-[180px] bg-yellow-200 rounded-full mix-blend-multiply opacity-25"></div> 
+      <div className="absolute z-[-1] top-[250px] left-[250px] w-[190px] h-[190px] bg-purple-200 rounded-full mix-blend-multiply opacity-35"></div> 
       
-       {/* <div className="absolute z-[-1] bottom-[200px] right-[50px] w-[160px] h-[160px] bg-pink-200 rounded-full mix-blend-multiply opacity-25"></div> */}
-      {/* <div className="absolute z-[-1] top-[300px] left-[100px] w-[210px] h-[210px] bg-teal-200 rounded-full mix-blend-multiply opacity-35"></div> */}
-      {/* <div className="absolute z-[-1] bottom-[300px] right-[200px] w-[180px] h-[180px] bg-orange-200 rounded-full mix-blend-multiply opacity-30"></div> */}
+       <div className="absolute z-[-1] bottom-[200px] right-[50px] w-[160px] h-[160px] bg-pink-200 rounded-full mix-blend-multiply opacity-25"></div>
+      <div className="absolute z-[-1] top-[300px] left-[100px] w-[210px] h-[210px] bg-teal-200 rounded-full mix-blend-multiply opacity-35"></div>
+      <div className="absolute z-[-1] bottom-[300px] right-[200px] w-[180px] h-[180px] bg-orange-200 rounded-full mix-blend-multiply opacity-30"></div>
     </div>
   );
 }

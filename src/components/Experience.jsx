@@ -12,7 +12,7 @@ export default function Experience() {
         <div className="animate-fade-left" >
           <div className="flex flex-col gap-2">
           <span className="font-bold text-2xl md:text-3xl">Gabi Scool</span>
-          <span>Nov 2021 - Oct 2021</span>
+          <span>Apr - Jul 2023</span>
 
           </div>
           <span className="font-bold text-[#0DB760] text-xl ">Rent From Me Project</span>
@@ -34,22 +34,16 @@ export default function Experience() {
         <div className="animate-fade-right">
           <div className="flex flex-col gap-2">
           <span className="font-bold text-2xl md:text-3xl">Github Collobration</span>
-          <span>Nov 2021 - Oct 2021</span>
+          <span>May 2023 -  Present</span>
 
           </div>
           <span className="font-bold text-[#0DB760] text-xl ">Somali Freelancing  Webste</span>
           <ul className="list-disc pl-5 mt-10"> {/* Use list-disc to add bullet points */}
             <li>
-              Rent refers to the payment made by a tenant to a landlord or
-              property owner in exchange for the use or occupancy of a property,
-              such as an apartment, house, or commercial space.
+              The Somali Freelancing Website is a platform designed for ordering freelance services within the Somali community.
             </li>
             <li>
-              It is typically paid on a regular basis, such as monthly, and is
-              governed by a rental agreement or lease that outlines the terms
-              and conditions of the rental arrangement, including the amount of
-              rent, payment due date, duration of the lease, and any additional
-              responsibilities or rights of both the tenant and the landlord.
+              It offers features such as seamless payment processing, user profile customization, and post ordering functionalities to facilitate smooth transactions between freelancers and clients.
             </li>
           </ul>
         </div>

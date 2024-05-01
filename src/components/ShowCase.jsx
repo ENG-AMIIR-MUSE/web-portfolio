@@ -2,6 +2,7 @@ import React from "react";
 import face from "../assets/face3.jpg";
 import { FaFilePdf, FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import pdf from '../assets/pdf.png'
 import { GrDocumentPdf } from "react-icons/gr";
 
 export default function ShowCase() {
@@ -27,7 +28,7 @@ export default function ShowCase() {
             <span className="bg-[#0DB760] font-bold text-white px-3 py-2 rounded-lg">View My Github</span>
             
             </Link>
-            <Link className="flex  items-center gap-3" to={'https://res.cloudinary.com/dyhmbyp4o/image/upload/v1714423262/kgujc006vazfpxbjfp8x.pdf '}>Download My Cv <GrDocumentPdf className="bg-red-900" size={30}/> </Link>
+            <Link className="flex  items-center gap-3" to={'https://res.cloudinary.com/dyhmbyp4o/image/upload/v1714423262/kgujc006vazfpxbjfp8x.pdf '}>Download My Cv <img className="w-10 h-10" src={pdf} alt="" /> </Link>
           </div>
         </div>
       </div>

@@ -1,22 +1,38 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
+import { Spinner } from "flowbite-react";
+import { useNavigate } from "react-router-dom";
 
 export default function ContactForm() {
+  const nav = useNavigate()
+  const formRef = useRef(); // Define formRef as a useRef
+  const [loading, setLoading] = useState(false);
+
   const sendEmail = (values) => {
+    setLoading(true);
     emailjs
-      .sendForm('service_32l8lf6', 'template_l70nugu', form.current, {
-        publicKey: 'E9ImXh91swVpNclmR',
+      .sendForm("service_32l8lf6", "template_l70nugu", formRef.current, {
+        publicKey: "E9ImXh91swVpNclmR",
       })
       .then(
         () => {
-          console.log('SUCCESS!');
+          console.log("SUCCESS!");
+          toast.success(
+            "Thank You For Your Contact Us , We Will Repond You Soon"
+          );
+          nav('/')
         },
         (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
+          console.log("FAILED...", error.text);
+          toast.error("Failed to send email. Please try again later.");
+        }
+      )
+      .finally(() => {
+        setLoading(false); // Set loading to false regardless of success or failure
+      });
   };
 
   const formValidationSchema = Yup.object().shape({
@@ -26,7 +42,7 @@ export default function ContactForm() {
   });
 
   return (
-    <div className="p-5 h-[90vh] m-auto max-w-lg mt-32">
+    <div className=" p-5 h-[90vh] m-auto max-w-lg mt-32">
       <Formik
         initialValues={{
           from_name: "",
@@ -40,12 +56,16 @@ export default function ContactForm() {
         }}
       >
         {({ errors, touched }) => (
-          <Form className="flex flex-col gap-10 ">
+          <Form ref={formRef} className="flex flex-col gap-10 ">
+            {" "}
+            {/* Add ref={formRef} */}
             <div>
-              <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl">Contact Me</h1>
+              <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl">
+                Contact Me
+              </h1>
               <p className="mt-3">
-                For more information or if you have a project for me to contribute, please fill
-                this form{" "}
+                For more information or if you have a project for me to
+                contribute, please fill this form{" "}
               </p>
             </div>
             <div className="mt-3">
@@ -58,7 +78,9 @@ export default function ContactForm() {
                   placeholder="Fullname"
                   id="fullname"
                   type="text"
-                  className={`w-full px-3 py-2 border rounded-md ${errors.from_name && touched.from_name && "border-red-500"}`}
+                  className={`text-black w-full px-3 py-2 border rounded-md ${
+                    errors.from_name && touched.from_name && "border-red-500"
+                  }`}
                 />
                 <ErrorMessage
                   name="from_name"
@@ -73,7 +95,9 @@ export default function ContactForm() {
                   placeholder="Subject"
                   id="subject"
                   type="text"
-                  className={`w-full px-3 py-2 border rounded-md ${errors.subject && touched.subject && "border-red-500"}`}
+                  className={` text-black w-full px-3 py-2 border rounded-md ${
+                    errors.subject && touched.subject && "border-red-500"
+                  }`}
                 />
                 <ErrorMessage
                   name="subject"
@@ -86,9 +110,12 @@ export default function ContactForm() {
                 <Field
                   name="message"
                   id="message"
+                  placeholder="Message"
                   as="textarea"
                   rows="4"
-                  className={`w-full px-3 py-2 border rounded-md ${errors.message && touched.message && "border-red-500"}`}
+                  className={`text-black w-full px-3 py-2 border rounded-md ${
+                    errors.message && touched.message && "border-red-500"
+                  }`}
                 />
                 <ErrorMessage
                   name="message"
@@ -97,9 +124,19 @@ export default function ContactForm() {
                 />
                 <button
                   type="submit"
-                  className="bg-[#0DB75F] text-white py-4 rounded-lg font-bold"
+                  className={`bg-[#0DB75F] flex items-center justify-center  text-white py-4 rounded-lg  font-bold ${
+                    loading ? "cursor-not-allowed opacity-50" : ""
+                  }`}
+                  disabled={loading}
                 >
-                  Submit
+                  {loading ? (
+                    <span className="flex items-center gap-4">
+                      <Spinner />
+                      Submitting...
+                    </span>
+                  ) : (
+                    "Submit"
+                  )}
                 </button>
               </div>
             </div>

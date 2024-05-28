@@ -5,6 +5,7 @@ import Quiz from "../assets/Quiz.mp4";
 import Noty from "../assets/Noty.mp4";
 import foodDelivery from "../assets/food.mp4";
 import gameDelivery from "../assets/game.mp4";
+import voting from "../assets/voting.mp4";
 
 export default function Projects() {
   return (
@@ -43,6 +44,21 @@ export default function Projects() {
         </div>
       
      
+        <div className="card-content  rounded-lg flex flex-col justify-between">
+          <video
+            controls
+            className="w-full rounded-lg"
+            style={{ height: "220px" }}
+          >
+            <source src={voting}  />
+            Your browser does not support the video tag.
+          </video>
+          <div className="flex flex-col p-4">
+            <h2 className="font-bold text-xl mb-2">Fullstack Voting Web</h2>
+            <p className="text-slate-500">A quiz app built using React, Redux, and Node.js.</p>
+          </div>
+        </div>
+      
         <div className="card-content  rounded-lg flex flex-col justify-between">
           <video
             controls

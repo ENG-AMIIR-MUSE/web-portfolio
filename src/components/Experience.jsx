@@ -34,7 +34,8 @@ export default function Experience() {
               withdrawing.
             </li>
             <li>
-              Implemented full authentication system including OTP verification.
+              Implemented full authentication Process including OTP
+              verification.
             </li>
             <li>
               Designed and developed various UI screens for a seamless user

@@ -7,7 +7,7 @@ import foodDelivery from "../assets/food.mp4";
 import gameDelivery from "../assets/game.mp4";
 import voting from "../assets/voting.mp4";
 
-const vedios = [
+export const vedios = [
   {
     v: voting,
     title: "JUTSA VOTING APP",
@@ -52,7 +52,11 @@ export default function Projects() {
             className="card-content rounded-lg flex flex-col justify-between"
             key={v.title}
           >
-            <video controls className="w-full h-[250px] rounded-lg">
+            <video
+              autoPlay={false}
+              controls
+              className="w-full h-[250px] rounded-lg"
+            >
               <source src={v.v} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
@@ -63,110 +67,6 @@ export default function Projects() {
           </div>
         );
       })}
-
-      {/* Repeat the above structure for other project cards */}
-      {/* 
-      <div className="card-content  rounded-lg flex flex-col justify-between">
-        <video
-          controls
-          className="w-full rounded-lg"
-          style={{ height: "auto" }}
-        >
-          <source src={noteTakenApp} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div className="flex flex-col p-4">
-          <h2 className="font-bold text-xl mb-2">Note Taken App</h2>
-          <p className="text-slate-500">
-            An app for taking notes built with React, Redux, and Node.js.
-          </p>
-        </div>
-      </div>
-
-      <div className="card-content  rounded-lg flex flex-col justify-between">
-        <video
-          controls
-          className="w-full rounded-lg"
-          style={{ height: "220px" }}
-        >
-          <source src={voting} />
-          Your browser does not support the video tag.
-        </video>
-        <div className="flex flex-col p-4">
-          <h2 className="font-bold text-xl mb-2">Fullstack Voting Web</h2>
-          <p className="text-slate-500">
-            A quiz app built using React, Redux, and Node.js.
-          </p>
-        </div>
-      </div>
-
-      <div className="card-content  rounded-lg flex flex-col justify-between">
-        <video
-          controls
-          className="w-full rounded-lg"
-          style={{ height: "220px" }}
-        >
-          <source src={Quiz} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div className="flex flex-col p-4">
-          <h2 className="font-bold text-xl mb-2">Quiz App</h2>
-          <p className="text-slate-500">
-            A quiz app built using React, Redux, and Node.js.
-          </p>
-        </div>
-      </div>
-
-      <div className="card-content  rounded-lg flex flex-col justify-between">
-        <video
-          controls
-          className="w-full rounded-lg"
-          style={{ height: "250px" }}
-        >
-          <source src={Noty} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div className="flex flex-col p-4">
-          <h2 className="font-bold text-xl mb-2">Nooty App</h2>
-          <p className="text-slate-500">
-            An app for managing notes and todo lists.
-          </p>
-        </div>
-      </div>
-
-      <div className="card-content  rounded-lg flex flex-col justify-between">
-        <video
-          controls
-          className="w-full rounded-lg"
-          style={{ height: "250px" }}
-        >
-          <source src={foodDelivery} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div className="flex flex-col p-4">
-          <h2 className="font-bold text-xl mb-2">Food Delivery Web</h2>
-          <p className="text-slate-500">
-            A website for food delivery built with React.
-          </p>
-        </div>
-      </div>
-
-      <div className="card-content  rounded-lg flex flex-col justify-between">
-        <video
-          controls
-          className="w-full rounded-lg"
-          style={{ height: "auto" }}
-        >
-          <source src={gameDelivery} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div className="flex flex-col p-4">
-          <h2 className="font-bold text-xl mb-2">Game Delivery Web</h2>
-          <p className="text-slate-500">
-            A website for game delivery built with React.
-          </p>
-        </div>
-      </div> */}
     </div>
   );
 }

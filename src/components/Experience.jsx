@@ -109,24 +109,15 @@ export default function Experience() {
       <h2 className="text-xl md:text-2xl lg:text-3xl text-[#0DB760] font-bold py-2 mt-10">
         Personal Projects
       </h2>
+      <p className="text-md md:text-lg lg:text-xl text-gray-400 mt-2">
+        These are some of my older projects, but they still hold a special place
+        for me as they showcase my early skills and growth in the field.
+      </p>
 
       <div className="p-4 flex flex-col  md:flex-row items-center  gap-5">
         <div className="animate-fade-right">
-          <div className="flex flex-col gap-2">
-            <span className="font-bold text-2xl md:text-3xl">
-              Various Video Projects
-            </span>
-          </div>
-          <ul className="list-disc pl-5 mt-2">
-            <li>
-              Worked on several video projects, gaining experience in video
-              editing and production.
-            </li>
-            <li>
-              These projects helped in understanding the basics of multimedia
-              content creation.
-            </li>
-          </ul>
+          <div className="flex flex-col gap-2"></div>
+          <ul className="list-disc pl-5 mt-2"></ul>
         </div>
       </div>
 
